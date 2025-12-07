@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wroclaw Gnomes - A living map full of hidden treasures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Cal Sans';
+            src: url('https://cdn.jsdelivr.net/gh/calcom/font@main/fonts/CalSans-SemiBold.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/calcom/font@main/fonts/CalSans-SemiBold.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Figtree', sans-serif;
+            background-color: #f5f5f5;
+            background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
+            background-size: 20px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #000;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .gnome-illustration {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-family: 'Cal Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 1.1;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .tagline {
+            font-family: 'Figtree', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: hsl(214, 8%, 36%);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #000;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Figtree', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: fit-content;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-button img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .phone-mockup {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+        }
+        
+        footer {
+            background-color: transparent;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #000;
+            text-decoration: none;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 0.7;
+        }
+        
+        .footer-credit {
+            font-family: 'Figtree', sans-serif;
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+                gap: 60px;
+                padding: 40px 20px;
+            }
+            
+            .title {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 18px;
+            }
+            
+            .phone-mockup {
+                max-width: 280px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 16px;
+            }
+            
+            .gnome-illustration {
+                width: 150px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="gnome.png" alt="Wroclaw Gnome" class="gnome-illustration">
+            <h1 class="title">Wroclaw Gnomes</h1>
+            <p class="tagline">A living map full of hidden treasures – go outside and explore!</p>
+            <a href="#" class="download-button">
+                <img src="apple-logo.png" alt="Apple Logo">
+                <span>Download AppStore</span>
+            </a>
+        </div>
+        <div class="right-section">
+            <img src="simulator.png" alt="Wroclaw Gnomes App" class="phone-mockup">
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Support</a>
+        </div>
+        <p class="footer-credit">Wroclaw Gnomes is actively designed and developed by Viacheslav Starovoitov</p>
+    </footer>
+</body>
+</html>
